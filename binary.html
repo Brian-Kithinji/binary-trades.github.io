@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join binary trades</title>
+    <style>
+    	body {
+    	margin:0;
+    	}
+    	header {
+    		display:block;
+    		background:#00001a;
+    		color:white;
+    		padding:15px;
+    	}
+    	input {
+    		display:block;
+    		margin:10px;
+    		padding:10px;
+    		width:80%;
+    		border-radius:5px;
+    	}
+    	button{
+    		display:block;
+    		width:80%;
+    		background:green;
+    		color:white;
+    		padding:10px;
+    		margin:10px;
+    	}
+    	ul {
+    		box-shadow:0 0 2 grey;
+    	}
+    	</style>
+   </head>
+   <body>
+      <header>
+      	<h2>Binary-trades</h2>
+      	</header>
+      	<p>Features</p>
+      	<ul>
+   <li>Purely non-referral based</li>
+   <li>Invest in file coin</li>
+   <li>The market cap of file coin is currently at kshs 347 million.</li>
+   <li>That makes it the most liquid coin (ability to be converted back to money) in Kenya.</li>
+   <li>You can role the spin wheel and some cash at your own free time.</li>
+      		</ul>
+      <p>Entry fee is kshs 1050</p>
+      <p>Enter your mobile phone number and proceed with the mpesa stk push</p>
+      <hr>
+      	<input
+      	 type="text"
+      	  id="con"
+      	  required
+      	  />
+      		<button
+      		onclick="submit()"
+      		>Deposit</button>
+     <p>*You will be redirrected to dashboard</p>
+     <script>
+    		function submit() {
+    	let inp=
+    	document.querySelector("input")
+   fetch(`https://sps.binary-trades.com/public/${inp.value}/48/1050`)
+    		}
+    		</script>
+   </body>
+</html>
